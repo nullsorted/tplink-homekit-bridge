@@ -1,0 +1,15 @@
+[Unit]
+Description=TP-Link HomeKit Bridge
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=kevin
+WorkingDirectory=/home/kevin/homekit-bridge
+ExecStart=/home/kevin/homekit-bridge/venv/bin/python3 bridge.py
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,24 @@
+bridge:
+  name: "TP-Link Bridge"
+  port: 51826
+  # pin: "031-45-154"  # Uncomment to set a fixed pin code (format: xxx-xx-xxx)
+
+devices:
+  # Override display names in Apple Home (by IP address)
+  overrides:
+    # "192.168.0.31":
+    #   name: "Office Lamp"
+    # "192.168.0.76":
+    #   name: "Living Room Lamp"
+
+  # Devices to exclude from the bridge (by IP or alias)
+  exclude: []
+    # - "192.168.0.99"
+    # - "Guest Room Plug"
+
+polling:
+  interval_seconds: 5  # How often to poll TP-Link device state
+
+rediscovery:
+  enabled: true
+  interval_seconds: 60  # How often to scan for new devices

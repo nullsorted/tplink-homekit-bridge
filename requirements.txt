@@ -1,0 +1,3 @@
+python-kasa
+HAP-python[QRCode]
+pyyaml
